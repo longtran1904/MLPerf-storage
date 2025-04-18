@@ -6,7 +6,7 @@ CONFIG_PATH=${SCRIPT_DIR}/storage-conf
 WORKLOAD_PATH=${CONFIG_PATH}/workload
 
 # TODO add DLRM when supported
-WORKLOADS=("unet3d" "cosmoflow" "resnet50")
+WORKLOADS=("cloudlab_unet3d" "unet3d" "cosmoflow" "resnet50")
 
 get_config_file() {
 	local workload=$1; shift
