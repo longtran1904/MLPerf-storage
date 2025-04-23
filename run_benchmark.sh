@@ -5,7 +5,7 @@ exec > >(tee -a "$LOGFILE") 2>&1
 echo "Script started at $(date)"
 
 declare -a batch_sizes=(1)
-declare -a num_threads=(4)
+declare -a num_threads=(4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40)
 
 FlushDisk() {
     echo "Flushing disk caches..."
@@ -16,8 +16,8 @@ FlushDisk() {
 for batch_size in "${batch_sizes[@]}"; do
         for num_thread in "${num_threads[@]}"; do
                 FlushDisk
-                sed -i "s/^batch_size: .*/batch_size: ${batch_size}/" /storage-conf/workload/cloudlab_unet3d_h100.yaml
-                sed -i "s/^num_threads: .*/num_threads: ${num_thread}/" /storage-conf/workload/cloudlab_unet3d_h100.yaml
+                sed -i "s/^\(\s*batch_size:\s*\).*/\1${batch_size}/" storage-conf/workload/cloudlab_unet3d_h100.yaml
+                sed -i "s/^\(\s*read_threads:\s*\).*/\1${num_thread}/" storage-conf/workload/cloudlab_unet3d_h100.yaml
                 echo "Running benchmark with batch size: ${batch_size} and num threads: ${num_thread}"
                 RESULTDIR="resultsdir/batch_size_${batch_size}_num_threads_${num_thread}"
 

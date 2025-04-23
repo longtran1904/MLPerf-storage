@@ -1,0 +1,6 @@
+[INFO] 2025-04-23T20:28:55.710940 Profiling DLIO /mnt/ioopt/appbench/apps/MLPerf-storage/resultsdir/batch_size_1_num_threads_34/trace-0-of-1.pfw [/mnt/ioopt/appbench/apps/MLPerf-storage/dlio_benchmark/dlio_benchmark/utils/config.py:189]
+[INFO] 2025-04-23T20:28:55.711847 Running DLIO with 1 process(es) [/mnt/ioopt/appbench/apps/MLPerf-storage/dlio_benchmark/dlio_benchmark/main.py:100]
+[INFO] Total amount of data each host will consume is 273.064948618412 GB; each host has [np.float64(187.5592384338379)] GB memory [/mnt/ioopt/appbench/apps/MLPerf-storage/dlio_benchmark/dlio_benchmark/utils/statscounter.py:121]
+[INFO] 2025-04-23T20:29:11.683902 Max steps per epoch: 2000 = 1 * 2000 / 1 / 1 (samples per file * num files / batch size / comm size) [/mnt/ioopt/appbench/apps/MLPerf-storage/dlio_benchmark/dlio_benchmark/main.py:321]
+[INFO] 2025-04-23T20:29:11.849974 Starting epoch 1: 2000 steps expected [/mnt/ioopt/appbench/apps/MLPerf-storage/dlio_benchmark/dlio_benchmark/utils/statscounter.py:192]
+[INFO] 2025-04-23T20:29:11.882454 Starting block 1 [/mnt/ioopt/appbench/apps/MLPerf-storage/dlio_benchmark/dlio_benchmark/utils/statscounter.py:264]
